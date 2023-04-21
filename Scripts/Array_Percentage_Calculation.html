@@ -1,0 +1,21 @@
+<script>
+    
+    let sampleArray = [100, 200, 300];
+
+    console.log("Sample Array");
+    console.log(sampleArray);    
+
+    let sum = sampleArray.reduce((a,b) => a+b);
+
+    let percents = sampleArray.map(n => n/sum * 100.0,2);
+
+    console.log("Percents");
+    console.log(percents);
+
+    percents_rounded = percents.map(function(each_element){
+        return Number(each_element.toFixed(2));
+    })
+    console.log("Percents Rounded");
+    console.log(percents_rounded);
+
+</script>

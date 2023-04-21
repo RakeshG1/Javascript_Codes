@@ -1,0 +1,24 @@
+<script>
+    sample_json_data = {
+                        timeseries_data: {name:"tempData", 
+                                            type: "timeseries"
+                                        },
+                        dataKey:{type: "json", name: "temperature-device"
+                                },
+                        data: [[100,101], [200,201], [300,301]]
+                        }
+
+    console.log("sample data -> ", sample_json_data)
+
+    data = Object.values(sample_json_data["data"])
+    console.log("data -->", data)
+
+    timeseries_data = Object.values(sample_json_data["timeseries_data"])
+    console.log("timeseries_data -->", timeseries_data)
+
+</script>
+
+<!-- 
+    
+    Execute by running this file in browser url --file:///Users/rock/Git_Repo/Javascript_Codes/Scripts/Array_Dictionary.html 
+-->
