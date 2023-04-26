@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <title>d3.js learning</title>
+        <script src="https://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+        <style type="text/css">
+
+            .mainTable{
+                overflow: auto;
+                height: 40px;
+                border-collapse: collapse;
+                width: 20%;
+            }
+            .tableHeader{
+                position: sticky;
+                top: 0;
+                padding: 8px 8px;
+                text-align: left;
+                color: black;
+                background: lightgray;
+            }
+            .tableTR{
+                padding: 10px 10px;
+                text-align: left;
+                color:black;
+                border-bottom: 1pt solid darkslateblue;
+            }
+            .tableTD{
+                padding-top: .5em;
+                padding-bottom: .5em;
+            }
+        </style>
+    </head>
+    <body>
+        <table class="mainTable">
+            <thead class="tableHeader">
+                <tr>
+                    <th>Timestamp</th>
+                    <th>Code</th>
+                </tr>
+            </thead>
+            <tbody id="tableData">
+            </tbody>
+        </table>
+    </body>
+</html>
+
+<script>
+    var datetimeList = ["2023-01-01 00:00:01",
+                        "2023-01-02 00:00:01",
+                        "2023-01-03 00:00:01",
+                        "2023-01-04 00:00:01",
+                        "2023-01-05 00:00:01",
+                        "2023-01-06 00:00:01"    
+                        ]
+    var codesList = ["aa", "bb", "aa", "cc", "bb", "ee"]
+    var tables = "";
+    for (var i=0; i<datetimeList.length; i++){
+        tables += "<tr class='tableTR'>" +
+            "<td class='tableTD'>" + datetimeList[i] + "</td>" +
+            "<td class='tableTD'>" + codesList[i] + "</td>" +
+            "</tr>";
+    }
+    document.getElementById("tableData").innerHTML = "<table>" + tables + "</table>";
+</script>
